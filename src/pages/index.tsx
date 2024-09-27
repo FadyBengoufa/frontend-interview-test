@@ -9,6 +9,12 @@ import { useRouter } from "next/router";
 export default function Home() {
   const columns: ColumnDef<any>[] = [
     {
+      accessorKey: "id",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="ID" />
+      ),
+    },
+    {
       accessorKey: "businessDate",
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Business Date" />
